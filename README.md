@@ -14,7 +14,7 @@ Ce projet permet de récupérer des articles scientifiques en PDF à partir d'un
 ## Structure du projet
 
 Le projet est organisé en plusieurs fichiers Python :
-
+- `__init__.py` : Fichier d'initialisation qui importe toutes les bibliothèques nécessaires.
 - `Scraper_pdf.py`: Contient les fonctions pour télécharger les fichiers PDF à partir de Sci-Hub.
 - `Scraper_PubMed.py`: Contient les fonctions pour scraper PubMed et récupérer les métadonnées des articles.
 - `utils.py`: Contient les fonctions utilitaires pour traiter les prompts et extraire les mots-clés.
