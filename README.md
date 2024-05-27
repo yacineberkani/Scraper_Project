@@ -1,6 +1,6 @@
 # PDF Scraper Project
 
-![img](https://github.com/yacineberkani/Scraper_Project/blob/main/Design%20sans%20titre%20(1).png)
+![img](https://github.com/yacineberkani/Scraper_Project/blob/main/Ajouter%20un%20titre.png)
 
 ## Description
 
