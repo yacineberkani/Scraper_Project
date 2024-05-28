@@ -66,7 +66,8 @@ def read_csv(file_name):
     """
     base = pd.read_csv(file_name, usecols=['DOI'])
     base.dropna(inplace=True)
-    return list(base['DOI'])
+    DOIs = list(base['DOI'])
+    return DOIs
 
 def generate_base_urls(dois):
     """
@@ -79,7 +80,8 @@ def generate_base_urls(dois):
         list: Liste des URLs de base.
     """
     sci_hub_base = "https://sci-hub.st"
-    return [f"{sci_hub_base}/{doi}" for doi in dois]
+    url_doi = [f"{sci_hub_base}/{doi}" for doi in dois]
+    return url_doi
 
 def fetch_pdf_urls(base_urls):
     """
@@ -104,7 +106,9 @@ def fetch_pdf_urls(base_urls):
                 print("Article non disponible")
         else:
             print(f"Erreur lors de la requête HTTP : {response.status_code}")
-    return pdf_urls
+    pdf_list = [url.split('#')[0] for url in pdf_urls]
+    return pdf_list
+
 
 def clean_pdf_urls(pdf_urls):
     """
